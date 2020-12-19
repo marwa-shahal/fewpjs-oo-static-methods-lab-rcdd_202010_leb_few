@@ -1,3 +1,31 @@
 class Formatter {
-  //add static methods here
+
+  static capitalize(string) {
+    // capitalizes first letter
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  
+  static sanitize(string) {
+    // removes any non alpha-numeric characters except dash and single quotes (apostrophes)
+    return string.replace(/[^A-Za-z0-9' -]+/g, '');
+    }
+    
+    static titleize(sting){
+      let exceptions=['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by','from'];
+      let word=string.split(' ')
+     // for(let j=0; j<exceptions.length; j++){
+      //for (let i=0; i<word.length;I++){
+      let result=word.map( (w,index) => {
+        if (index===0){
+          return w.charAt(0).toUpperCase() + string.slice(1);
+        }else if(exceptions.include(w)){
+          return w;
+        }else{
+          return w.charAt(0).toUpperCase() + string.slice(1);
+        }
+       });
+     
+      return result.join('');
+    }
+ 
 }

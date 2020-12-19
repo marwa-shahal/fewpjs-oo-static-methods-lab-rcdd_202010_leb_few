@@ -16,7 +16,7 @@ class Formatter {
       let result=word.map( (w,index) => {
         if (index===0){
           return w.charAt(0).toUpperCase() + string.slice(1);
-        }else if(exceptions.findIndex(w)){
+        }else if(exceptions.findIndex()){
           return w;
         }else{
           return w.charAt(0).toUpperCase() + string.slice(1);

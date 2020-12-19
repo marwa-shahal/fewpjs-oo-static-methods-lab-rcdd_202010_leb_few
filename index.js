@@ -11,7 +11,7 @@ class Formatter {
     }
     
 
-function titleize(string) {
+static titleize(string) {
   let exceptions = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from'];
   let word = string.split(" ")
   let result = word.map((w, index) => {

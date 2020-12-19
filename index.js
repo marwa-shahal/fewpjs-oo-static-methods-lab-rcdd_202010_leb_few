@@ -12,9 +12,7 @@ class Formatter {
     
     static titleize(sting){
       let exceptions=['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by','from'];
-      let word=string.split(' ')
-     // for(let j=0; j<exceptions.length; j++){
-      //for (let i=0; i<word.length;I++){
+      let word=string.split(" ")
       let result=word.map( (w,index) => {
         if (index===0){
           return w.charAt(0).toUpperCase() + string.slice(1);
